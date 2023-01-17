@@ -1,0 +1,33 @@
+class play():
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def matchWin(self):
+        if((self.first == 'A' and self.last == 'Z') or 
+           (self.first == 'B' and self.last == 'X') or
+           (self.first == 'C' and self.last == 'Y')):
+            return self.first
+        elif((self.first == 'A' and self.last == 'X') or 
+           (self.first == 'B' and self.last == 'Y') or
+           (self.first == 'C' and self.last == 'Z')):
+            return 0
+        else:
+            return self.last
+    
+    def matchSign(self):
+        if(self.last == 'Z'):
+            return 3
+        elif (self.last == 'Y'):
+            return 2
+        else: return 1
+        
+        
+    def match(self):
+        if(self.matchWin() == self.first):
+            return 0
+        elif(self.matchWin() == 0):
+            return 3 + self.matchSign()
+        else: return 6 + self.matchSign()
+        
+        
