@@ -1,0 +1,13 @@
+'''
+giochiamo a rock paper scissors:
+    A ==   rock   == X  --> 1 punto
+    B ==   paper  == Y  --> 2 punti
+    C == scissors == z  --> 3 punti   
+    
+    1 --> 0 punti
+    x --> 3 punti
+    2 --> 6 punti
+    
+    punteggio totale round: segno + esito
+    
+'''
